@@ -11,9 +11,9 @@ services:
     image: postgres:17-alpine
     environment:
       POSTGRES_USER: app
-      POSTGRES_PASSWORD: latihan     # hanya untuk latihan lokal
+      POSTGRES_PASSWORD: latihan    # hanya untuk latihan lokal
     volumes: ["dbdata:/var/lib/postgresql/data"]
-    healthcheck:                     # pg_isready tiap 3 detik, maks. 10 kali
+    healthcheck:                    # pg_isready tiap 3 detik, maks. 10 kali
       test: ["CMD", "pg_isready", "-U", "app"]
       interval: 3s
       retries: 10
