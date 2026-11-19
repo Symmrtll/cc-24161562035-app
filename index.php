@@ -5,6 +5,7 @@ const PEMILIK = "24161562035 - Syamrotul Fuat";
 const VERSI = "1.0"; // dinaikkan saat rolling update (P8)
 // DATABASE_URL = postgresql://user:pass@host:5432/db?sslmode=require
 
+
 function db(int $timeout = 5): PDO {
     $u = parse_url(getenv("DATABASE_URL"));
     parse_str($u["query"] ?? "", $q);
